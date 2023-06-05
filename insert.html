@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ultag">
+    <li>java</li>
+    <li>java-script</li>
+    <li id="litag">react js</li>
+    <li>hibernet</li>
+    <li>spring</li>
+  </ul>
+  <script>
+    //create html tag
+    var newtag=document.createElement("li")
+    newtag.textContent="web tech"
+    //target the element
+    var ul=document.getElementById("ultag")
+    var x=document.getElementById("litag")
+    //insert the element just before targated element
+    ul.insertBefore(newtag,x)
+  </script>
+</body>
+</html>

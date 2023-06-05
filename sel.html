@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //createing html element
+    var tag=document.createElement("h1")
+    //add text to create element
+    tag.textContent="doc"
+    //add selector
+    tag.id="heading"
+    console.log(tag)
+    //add css to create element
+    tag.style.color="red"
+    //addind one element into the another element
+   document.body.appendChild(tag)
+
+    var divtag=document.createElement("div")
+    divtag.innerHTML="hi i am div tag"
+    divtag.className="box"
+    console.log(divtag)
+    document.body.appendChild(divtag)
+  </script>
+</body>
+</html>

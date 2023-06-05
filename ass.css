@@ -1,0 +1,36 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+section{
+  height: 90vh;
+  width: 50%;
+  background-color: blue;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 60px;
+}
+section>.box1{
+  height: 70vh;
+  width: 80%;
+  background-color: red;
+  margin: auto;
+  display: flex;
+}
+section>.box1>.circle1{
+  height: 130px;
+  width: 130px;
+  background-color: pink;
+  border-radius: 80%; 
+  margin-top: 350px;
+  margin-left: 25px;
+}
+section>.box1>.circle2{
+  height: 130px;
+  width: 130px;
+  background-color: chartreuse;
+  border-radius: 80%; 
+  margin-left: 300px;
+  margin-top: 25px;
+}

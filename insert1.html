@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ultag">
+    <li id="java">java</li>
+    <li id="sql">sql</li>
+    <li id="js">js</li>
+    <li id="html">html</li>
+  </ul>
+  <script>
+    var l1=document.createElement("li")
+    var l2=document.createElement("li")
+    var l3=document.createElement("li")
+    var l4=document.createElement("li")
+
+    l1.textContent="react js"
+    l2.textContent="Aangular js"
+    l3.textContent="metro js"
+    l4.textContent="node js"
+
+    l1.style.color="blue"
+    l2.style.color="blue"
+    l3.style.color="blue"
+    l4.style.color="blue"
+    
+    //target element
+
+    var ultag=document.getElementById("ultag")
+    var sql=document.getElementById("sql")
+    var js=document.getElementById("js")
+    var html=document.getElementById("html")
+
+    ultag.insertBefore(l1,sql)
+    ultag.insertBefore(l2,js)
+    ultag.insertBefore(l3,html)
+    ultag.appendChild(l4)
+  </script>
+</body>
+</html>

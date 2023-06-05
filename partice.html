@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="v1.displayvehicle()">Display</button>
+  <script>
+    class parkvehicle
+    {
+      constructor()
+      {
+       this.vehicle=[]
+      }
+      vehicledetails(VNO,VMODEL,PHONE,CNAME,CHECK_IN,CHECK_OUT)
+     {
+       var x={
+        VNO,
+        VMODEL,
+        PHONE,
+        CNAME,
+        CHECK_IN,
+        CHECK_OUT:null
+       }
+       this.vehicle.push(x)  
+     }
+     displayvehicle()
+     {
+      console.table(this.vehicle)
+     }
+    }
+    const v1= new parkvehicle();
+    v1.vehicledetails("TN-24-AA-2002","bike",9360652080,"vasanth",new Date())
+    v1.vehicledetails("TN-23-AA-2003","car",9360652080,"vasanth",new Date())
+    v1.vehicledetails("TN-72-AA-2002","moter bike",9360652080,"vasanth",new Date())
+    v1.vehicledetails("TN-54-AA-2002","car",9360652080,"vasanth",new Date())
+    v1.vehicledetails("TN-64-AA-2002","bike",9360652080,"vasanth",new Date())
+    // v1.displayvehicle()
+
+  </script>
+</body>
+</html>

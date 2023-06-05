@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <style>
+    .but{
+      margin-left: 200px;
+      border-color: blue;
+    }
+   </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form action="" onsubmit="return vali()">
+  <div class="cointainer">User id : <input type="text"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Password : <input type="pasaword"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Name : <input type="text"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Address : <input type="text"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Country :
+    <select name="" id="">
+    <option value="">(select the country)</option>
+    <option value="">india</option>
+    <option value="">aus</option>
+    <option value="">rus</option>
+  </select> 
+  </div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">ZIP Code : <input type="text"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Email : <input type="text"></div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Sex : <input type="radio" name="a">Male <input type="radio" name="a" >Female</div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">Language : <input type="checkbox">English <input type="checkbox">Non English</div>
+  <p class="ERROR"></p>
+
+  <div class="cointainer">About : <textarea name="" id="" cols="30" rows="10"></textarea></div>
+  <p class="ERROR"></p>
+
+  <div class="but"><input type="submit" value="SUBMIT"></div>
+   <p class="ERROR"></p>
+  </form>
+<script>
+  function vali()
+  {
+    var userid=/^[a-zA-Z]{5,}$/
+    var password=/^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[!@$#%^&*])[a-zA-Z0-9!@$#%^&*]{3,}$/
+    var name=/^[a-zA-Z]{7,}$/
+    var address=/^[a-zA-Z]{3,}$/
+    var zipcode=/^[6789]{1}[0-9]{5}$/
+    var email=/^[a-zA-Z0-9]{3,}@{1}[A-Za-z]{2,}.{1}[a-zA-Z]{2,}$/
+    var phone=/^[6789]{1}[0-9]{9}$/
+    var radio=/^[select]$/
+    var check=/^[select]$/ 
+    var about=/^[a-zA-Z]$/
+
+    var input=document.getElementsByTagName("input")
+    var error=document.getElementsByClassName("ERROR")
+
+    if(userid.test(input[0].value))
+    {
+     error[0].innerHTML=""
+    }
+    else{
+      error[0].innerHTML="Required and must be of length 5 to 12."
+      error[0].style.color="red"
+      return false;
+    }
+    if(password.test(input[1].value))
+    {
+     error[1].innerHTML=""
+    }
+    else{
+      error[1].innerHTML="Required and must be of length 7 to 12."
+      error[1].style.color="red"
+      return false;
+    }
+    if(name.test(input[2].value))
+    {
+     error[2].innerHTML=""
+    }
+    else{
+      error[2].innerHTML="Required and alphabets only."
+      error[2].style.color="red"
+      return false;
+    }
+    if(address.test(input[3].value))
+    {
+     error[3].innerHTML=""
+    }
+    else{
+      error[3].innerHTML="optional."
+      error[3].style.color="red"
+      return false;
+    }
+    if(zipcode.test(input[4].value))
+    {
+     error[4].innerHTML=""
+    }
+    else{
+      error[4].innerHTML="Required must be number only."
+      error[4].style.color="red"
+      return false;
+    }
+    if(email.test(input[5].value))
+    {
+     error[5].innerHTML=""
+    }
+    else{
+      error[5].innerHTML="Required must be a valid email."
+      error[5].style.color="red"
+      return false;
+    }
+    if(radio.test(input[7].value))
+    {
+     error[7].innerHTML=""
+    }
+    else{
+      error[7].innerHTML=""
+      error[7].style.color="red"
+      return false;
+    }
+    if(check.test(input[8].value))
+    {
+     error[8].innerHTML=""
+    }
+    else{
+      error[8].innerHTML="Required."
+      error[8].style.color="red"
+      return false;
+    }
+    if(about.test(input[9].value))
+    {
+     error[9].innerHTML=""
+    }
+    else{
+      error[9].innerHTML="optional."
+      error[9].style.color="red"
+      return false;
+    }
+  }
+    </script>
+</body>
+</html>

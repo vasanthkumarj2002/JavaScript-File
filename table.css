@@ -1,0 +1,29 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+#myinput{
+  width: 100%;
+}
+#mytable{
+  width: 100%;
+  background-color: azure;
+  border: 2px solid red;
+}
+.header{
+  width: 500px;
+  background-color: rgb(247, 140, 140);
+  text-align: center;
+}
+tr{
+  width: 500px;
+  border: 2px solid red;
+  text-align: center; 
+}
+td{
+  width: 500px;
+  border: 2px solid rgb(0, 21, 255);
+  text-align: center;
+  color: blue;
+}
